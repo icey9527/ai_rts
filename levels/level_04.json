@@ -1,0 +1,191 @@
+{
+    "name": "第四关 - 多线作战",
+    "description": "敌军从多个方向发起攻击",
+    "units": {
+      "玩家母舰": {
+        "type": "mothership",
+        "name": "自由号母舰",
+        "description": "强大的指挥舰",
+        "max_hp": 2400,
+        "max_energy": 0,
+        "speed": 35,
+        "attack_damage": 40,
+        "attack_range": 230,
+        "attack_cooldown": 1.3,
+        "attack_type": "beam",
+        "radius": 40,
+        "projectile_speed": 500
+      },
+      "玩家战斗机": {
+        "type": "fighter",
+        "name": "猎鹰战斗机",
+        "description": "灵活的战斗机",
+        "max_hp": 240,
+        "max_energy": 170,
+        "speed": 105,
+        "attack_damage": 16,
+        "attack_range": 160,
+        "attack_cooldown": 0.5,
+        "attack_type": "ranged",
+        "projectile_count": 2,
+        "radius": 15,
+        "projectile_speed": 350,
+        "skill": {
+          "type": "damage_aoe",
+          "damage": 80,
+          "radius": 200
+        }
+      },
+      "玩家侦察机": {
+        "type": "scout",
+        "name": "幽灵侦察机",
+        "description": "高速侦察单位",
+        "max_hp": 160,
+        "max_energy": 140,
+        "speed": 160,
+        "attack_damage": 12,
+        "attack_range": 140,
+        "attack_cooldown": 0.3,
+        "attack_type": "ranged",
+        "radius": 10,
+        "projectile_speed": 400,
+        "skill": {
+          "type": "buff_speed",
+          "speed_multiplier": 2.0,
+          "radius": 220,
+          "duration": 10
+        }
+      },
+      "玩家轰炸机": {
+        "type": "bomber",
+        "name": "雷神轰炸机",
+        "description": "强力的轰炸单位",
+        "max_hp": 300,
+        "max_energy": 200,
+        "speed": 75,
+        "attack_damage": 35,
+        "attack_range": 220,
+        "attack_cooldown": 1.8,
+        "attack_type": "artillery",
+        "splash_radius": 100,
+        "radius": 20,
+        "projectile_speed": 140,
+        "skill": {
+          "type": "damage_aoe",
+          "damage": 120,
+          "radius": 250
+        }
+      },
+      "玩家修理机": {
+        "type": "repair",
+        "name": "医疗护卫舰",
+        "description": "专业的修理单位",
+        "max_hp": 200,
+        "max_energy": 170,
+        "speed": 85,
+        "repair_range": 120,
+        "repair_rate": 30,
+        "radius": 12,
+        "skill": {
+          "type": "heal_aoe",
+          "heal": 80,
+          "radius": 220
+        }
+      },
+      "敌军母舰": {
+        "type": "mothership",
+        "name": "统治者母舰",
+        "description": "敌军的超级母舰",
+        "max_hp": 2000,
+        "max_energy": 0,
+        "speed": 32,
+        "attack_damage": 35,
+        "attack_range": 200,
+        "attack_cooldown": 1.6,
+        "attack_type": "missile",
+        "radius": 45,
+        "projectile_speed": 160
+      },
+      "敌军战斗机": {
+        "type": "fighter",
+        "name": "毒蜂战斗机",
+        "description": "敌军的标准战斗机",
+        "max_hp": 200,
+        "max_energy": 170,
+        "speed": 100,
+        "attack_damage": 18,
+        "attack_range": 150,
+        "attack_cooldown": 0.5,
+        "attack_type": "ranged",
+        "radius": 15,
+        "skill": {
+          "type": "damage_aoe",
+          "damage": 60,
+          "radius": 180
+        }
+      },
+      "敌军轰炸机": {
+        "type": "bomber",
+        "name": "灾难轰炸机",
+        "description": "敌军重型轰炸机",
+        "max_hp": 280,
+        "max_energy": 190,
+        "speed": 65,
+        "attack_damage": 40,
+        "attack_range": 210,
+        "attack_cooldown": 2.2,
+        "attack_type": "artillery",
+        "splash_radius": 120,
+        "radius": 22,
+        "projectile_speed": 120,
+        "skill": {
+          "type": "disable",
+          "radius": 200,
+          "duration": 5
+        }
+      },
+      "敌军侦察机": {
+        "type": "scout",
+        "name": "影子侦察机",
+        "description": "敌军快速单位",
+        "max_hp": 140,
+        "max_energy": 130,
+        "speed": 140,
+        "attack_damage": 15,
+        "attack_range": 130,
+        "attack_cooldown": 0.4,
+        "attack_type": "ranged",
+        "radius": 10,
+        "skill": {
+          "type": "teleport",
+          "radius": 250
+        }
+      }
+    },
+    "player_units": [
+      {"unit_id": "玩家母舰", "position": [1200, 1400]},
+      {"unit_id": "玩家战斗机", "position": [1000, 1300]},
+      {"unit_id": "玩家战斗机", "position": [1100, 1300]},
+      {"unit_id": "玩家战斗机", "position": [1300, 1300]},
+      {"unit_id": "玩家战斗机", "position": [1400, 1300]},
+      {"unit_id": "玩家侦察机", "position": [1050, 1350]},
+      {"unit_id": "玩家侦察机", "position": [1150, 1350]},
+      {"unit_id": "玩家侦察机", "position": [1250, 1350]},
+      {"unit_id": "玩家侦察机", "position": [1350, 1350]},
+      {"unit_id": "玩家轰炸机", "position": [1200, 1360]},
+      {"unit_id": "玩家修理机", "position": [1200, 1320]}
+    ],
+    "enemy_units": [
+      {"unit_id": "敌军母舰", "position": [1200, 200]},
+      {"unit_id": "敌军战斗机", "position": [950, 300]},
+      {"unit_id": "敌军战斗机", "position": [1050, 300]},
+      {"unit_id": "敌军战斗机", "position": [1150, 300]},
+      {"unit_id": "敌军战斗机", "position": [1250, 300]},
+      {"unit_id": "敌军战斗机", "position": [1350, 300]},
+      {"unit_id": "敌军战斗机", "position": [1450, 300]},
+      {"unit_id": "敌军轰炸机", "position": [1100, 250]},
+      {"unit_id": "敌军轰炸机", "position": [1300, 250]},
+      {"unit_id": "敌军侦察机", "position": [800, 400]},
+      {"unit_id": "敌军侦察机", "position": [1600, 400]}
+    ]
+  }

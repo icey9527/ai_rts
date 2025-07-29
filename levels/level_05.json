@@ -1,0 +1,221 @@
+{
+    "name": "第五关 - 精英部队",
+    "description": "敌军派出了精英作战部队",
+    "units": {
+      "玩家母舰": {
+        "type": "mothership",
+        "name": "自由号母舰",
+        "description": "强大的指挥舰",
+        "max_hp": 2600,
+        "max_energy": 0,
+        "speed": 38,
+        "attack_damage": 45,
+        "attack_range": 240,
+        "attack_cooldown": 1.2,
+        "attack_type": "beam",
+        "radius": 40,
+        "projectile_speed": 500
+      },
+      "玩家战斗机": {
+        "type": "fighter",
+        "name": "猎鹰战斗机",
+        "description": "灵活的战斗机",
+        "max_hp": 260,
+        "max_energy": 180,
+        "speed": 110,
+        "attack_damage": 18,
+        "attack_range": 170,
+        "attack_cooldown": 0.45,
+        "attack_type": "ranged",
+        "projectile_count": 3,
+        "radius": 15,
+        "projectile_speed": 380,
+        "skill": {
+          "type": "damage_aoe",
+          "damage": 90,
+          "radius": 220
+        }
+      },
+      "玩家侦察机": {
+        "type": "scout",
+        "name": "幽灵侦察机",
+        "description": "高速侦察单位",
+        "max_hp": 180,
+        "max_energy": 150,
+        "speed": 170,
+        "attack_damage": 14,
+        "attack_range": 150,
+        "attack_cooldown": 0.25,
+        "attack_type": "ranged",
+        "radius": 10,
+        "projectile_speed": 420,
+        "skill": {
+          "type": "buff_speed",
+          "speed_multiplier": 2.2,
+          "radius": 240,
+          "duration": 12
+        }
+      },
+      "玩家轰炸机": {
+        "type": "bomber",
+        "name": "雷神轰炸机",
+        "description": "强力的轰炸单位",
+        "max_hp": 350,
+        "max_energy": 220,
+        "speed": 80,
+        "attack_damage": 40,
+        "attack_range": 240,
+        "attack_cooldown": 1.6,
+        "attack_type": "artillery",
+        "splash_radius": 120,
+        "radius": 20,
+        "projectile_speed": 150,
+        "skill": {
+          "type": "damage_aoe",
+          "damage": 140,
+          "radius": 280
+        }
+      },
+      "玩家重型机甲": {
+        "type": "heavy",
+        "name": "雷神重甲",
+        "description": "装甲厚重的重型单位",
+        "max_hp": 500,
+        "max_energy": 240,
+        "speed": 60,
+        "attack_damage": 32,
+        "attack_range": 190,
+        "attack_cooldown": 0.9,
+        "attack_type": "artillery",
+        "splash_radius": 90,
+        "radius": 25,
+        "projectile_speed": 200,
+        "skill": {
+          "type": "shield",
+          "shield_amount": 150,
+          "radius": 280,
+          "duration": 18
+        }
+      },
+      "玩家修理机": {
+        "type": "repair",
+        "name": "医疗护卫舰",
+        "description": "专业的修理单位",
+        "max_hp": 220,
+        "max_energy": 180,
+        "speed": 90,
+        "repair_range": 130,
+        "repair_rate": 35,
+        "radius": 12,
+        "skill": {
+          "type": "heal_aoe",
+          "heal": 100,
+          "radius": 250
+        }
+      },
+      "敌军精英母舰": {
+        "type": "mothership",
+        "name": "霸主级母舰",
+        "description": "敌军的精英母舰",
+        "max_hp": 2400,
+        "max_energy": 0,
+        "speed": 35,
+        "attack_damage": 50,
+        "attack_range": 220,
+        "attack_cooldown": 1.4,
+        "attack_type": "artillery",
+        "splash_radius": 100,
+        "radius": 50,
+        "projectile_speed": 180
+      },
+      "敌军精英战斗机": {
+        "type": "fighter",
+        "name": "暗影战斗机",
+        "description": "敌军的精英战斗机",
+        "max_hp": 240,
+        "max_energy": 180,
+        "speed": 110,
+        "attack_damage": 22,
+        "attack_range": 160,
+        "attack_cooldown": 0.4,
+        "attack_type": "ranged",
+        "projectile_count": 3,
+        "radius": 15,
+        "skill": {
+          "type": "teleport",
+          "radius": 300
+        }
+      },
+      "敌军精英重型机": {
+        "type": "heavy",
+        "name": "钢铁巨兽",
+        "description": "敌军的精英重装单位",
+        "max_hp": 450,
+        "max_energy": 200,
+        "speed": 55,
+        "attack_damage": 45,
+        "attack_range": 180,
+        "attack_cooldown": 1.0,
+        "attack_type": "artillery",
+        "splash_radius": 80,
+        "radius": 30,
+        "projectile_speed": 170,
+        "skill": {
+          "type": "damage_aoe",
+          "damage": 100,
+          "radius": 250
+        }
+      },
+      "敌军精英轰炸机": {
+        "type": "bomber",
+        "name": "末日轰炸机",
+        "description": "敌军的精英轰炸机",
+        "max_hp": 320,
+        "max_energy": 200,
+        "speed": 70,
+        "attack_damage": 55,
+        "attack_range": 250,
+        "attack_cooldown": 2.0,
+        "attack_type": "artillery",
+        "splash_radius": 140,
+        "radius": 25,
+        "projectile_speed": 130,
+        "skill": {
+          "type": "disable",
+          "radius": 220,
+          "duration": 6
+        }
+      }
+    },
+    "player_units": [
+      {"unit_id": "玩家母舰", "position": [1200, 1400]},
+      {"unit_id": "玩家战斗机", "position": [950, 1300]},
+      {"unit_id": "玩家战斗机", "position": [1050, 1300]},
+      {"unit_id": "玩家战斗机", "position": [1150, 1300]},
+      {"unit_id": "玩家战斗机", "position": [1250, 1300]},
+      {"unit_id": "玩家战斗机", "position": [1350, 1300]},
+      {"unit_id": "玩家战斗机", "position": [1450, 1300]},
+      {"unit_id": "玩家侦察机", "position": [1000, 1350]},
+      {"unit_id": "玩家侦察机", "position": [1100, 1350]},
+      {"unit_id": "玩家侦察机", "position": [1300, 1350]},
+      {"unit_id": "玩家侦察机", "position": [1400, 1350]},
+      {"unit_id": "玩家轰炸机", "position": [1150, 1360]},
+      {"unit_id": "玩家轰炸机", "position": [1250, 1360]},
+      {"unit_id": "玩家重型机甲", "position": [1200, 1380]},
+      {"unit_id": "玩家修理机", "position": [1200, 1320]}
+    ],
+    "enemy_units": [
+      {"unit_id": "敌军精英母舰", "position": [1200, 200]},
+      {"unit_id": "敌军精英战斗机", "position": [900, 300]},
+      {"unit_id": "敌军精英战斗机", "position": [1000, 300]},
+      {"unit_id": "敌军精英战斗机", "position": [1100, 300]},
+      {"unit_id": "敌军精英战斗机", "position": [1300, 300]},
+      {"unit_id": "敌军精英战斗机", "position": [1400, 300]},
+      {"unit_id": "敌军精英战斗机", "position": [1500, 300]},
+      {"unit_id": "敌军精英重型机", "position": [1050, 250]},
+      {"unit_id": "敌军精英重型机", "position": [1200, 250]},
+      {"unit_id": "敌军精英重型机", "position": [1350, 250]},
+      {"unit_id": "敌军精英轰炸机", "position": [1150, 200]},
+      {"unit_id": "敌军精英轰炸机", "position": [1250, 200]}
+    ]
+  }

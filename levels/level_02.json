@@ -1,0 +1,123 @@
+{
+  "name": "第二关 - 分散阵地",
+  "description": "我方部队分散在各个据点，敌人大军压境！",
+  "ai_type": "demon",
+  "difficulty": "hard",
+  
+  "units": {
+    "玩家据点守卫": {
+      "type": "heavy",
+      "name": "重型守卫机",
+      "description": "坚固的防守单位",
+      "max_hp": 220,
+      "max_energy": 120,
+      "speed": 120,
+      "attack_damage": 35,
+      "attack_range": 180,
+      "attack_cooldown": 0.8,
+      "attack_type": "artillery",
+      "splash_radius": 60,
+      "radius": 15,
+      "projectile_speed": 350,
+      "skill": {
+        "type": "shield",
+        "shield_amount": 150,
+        "duration": 10
+      }
+    },
+    "玩家机动部队": {
+      "type": "scout",
+      "name": "快速支援机",
+      "description": "高速支援单位",
+      "max_hp": 100,
+      "max_energy": 160,
+      "speed": 220,
+      "attack_damage": 20,
+      "attack_range": 140,
+      "attack_cooldown": 0.3,
+      "attack_type": "ranged",
+      "projectile_count": 3,
+      "radius": 10,
+      "projectile_speed": 500,
+      "skill": {
+        "type": "teleport",
+        "radius": 300
+      }
+    },
+    "敌军突击兵": {
+      "type": "fighter",
+      "name": "突击战斗机",
+      "description": "快速突击单位",
+      "max_hp": 140,
+      "max_energy": 130,
+      "speed": 190,
+      "attack_damage": 26,
+      "attack_range": 150,
+      "attack_cooldown": 0.4,
+      "attack_type": "ranged",
+      "projectile_count": 2,
+      "radius": 11,
+      "projectile_speed": 440,
+      "skill": {
+        "type": "buff_speed",
+        "speed_multiplier": 2.2,
+        "radius": 120,
+        "duration": 5
+      }
+    }
+  },
+  "terrain": [
+    {"type": "barrier", "position": [400, 250], "width": 80, "height": 20},
+    {"type": "barrier", "position": [400, 350], "width": 80, "height": 20},
+    {"type": "barrier", "position": [360, 300], "width": 20, "height": 80},
+    {"type": "barrier", "position": [440, 300], "width": 20, "height": 80},
+    {"type": "barrier", "position": [2000, 250], "width": 80, "height": 20},
+    {"type": "barrier", "position": [2000, 350], "width": 80, "height": 20},
+    {"type": "barrier", "position": [1960, 300], "width": 20, "height": 80},
+    {"type": "barrier", "position": [2040, 300], "width": 20, "height": 80},
+    {"type": "barrier", "position": [400, 1250], "width": 80, "height": 20},
+    {"type": "barrier", "position": [400, 1350], "width": 80, "height": 20},
+    {"type": "barrier", "position": [360, 1300], "width": 20, "height": 80},
+    {"type": "barrier", "position": [440, 1300], "width": 20, "height": 80},
+    {"type": "barrier", "position": [2000, 1250], "width": 80, "height": 20},
+    {"type": "barrier", "position": [2000, 1350], "width": 80, "height": 20},
+    {"type": "barrier", "position": [1960, 1300], "width": 20, "height": 80},
+    {"type": "barrier", "position": [2040, 1300], "width": 20, "height": 80},
+    {"type": "asteroid", "position": [1200, 800], "radius": 120}
+  ],
+  "player_units": [
+    {"unit_id": "玩家据点守卫", "position": [400, 300]},
+    {"unit_id": "玩家机动部队", "position": [380, 280]},
+    {"unit_id": "玩家据点守卫", "position": [2000, 300]},
+    {"unit_id": "玩家机动部队", "position": [2020, 280]},
+    {"unit_id": "玩家据点守卫", "position": [400, 1300]},
+    {"unit_id": "玩家机动部队", "position": [380, 1320]},
+    {"unit_id": "玩家据点守卫", "position": [2000, 1300]},
+    {"unit_id": "玩家机动部队", "position": [2020, 1320]}
+  ],
+  "enemy_units": [
+    {"unit_id": "敌军突击兵", "position": [1050, 750]},
+    {"unit_id": "敌军突击兵", "position": [1350, 750]},
+    {"unit_id": "敌军突击兵", "position": [1050, 850]},
+    {"unit_id": "敌军突击兵", "position": [1350, 850]},
+    {"unit_id": "敌军突击兵", "position": [1200, 720]},
+    {"unit_id": "敌军突击兵", "position": [1200, 880]},
+    {"unit_id": "敌军突击兵", "position": [800, 800]},
+    {"unit_id": "敌军突击兵", "position": [1600, 800]},
+    {"unit_id": "敌军突击兵", "position": [1200, 600]},
+    {"unit_id": "敌军突击兵", "position": [1200, 1000]},
+    {"unit_id": "敌军突击兵", "position": [900, 650]},
+    {"unit_id": "敌军突击兵", "position": [1500, 650]},
+    {"unit_id": "敌军突击兵", "position": [900, 950]},
+    {"unit_id": "敌军突击兵", "position": [1500, 950]}
+  ],
+  "victory_conditions": {
+    "eliminate_all": true
+  },
+  "defeat_conditions": {
+    "lose_all": true
+  },
+  "special_rules": {
+    "description": "你的部队分散在四个据点！利用机动部队支援各据点！"
+  }
+}

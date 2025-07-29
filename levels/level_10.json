@@ -1,0 +1,88 @@
+{
+  "name": "第一关 - 四面楚歌",
+  "description": "敌人从四个方向同时包围，突出重围！",
+  "ai_type": "nightmare",
+  "difficulty": "hard",
+  
+  "units": {
+    "玩家战斗机": {
+      "type": "fighter",
+      "name": "突围战斗机",
+      "description": "灵活的战斗单位",
+      "max_hp": 150,
+      "max_energy": 140,
+      "speed": 180,
+      "attack_damage": 25,
+      "attack_range": 160,
+      "attack_cooldown": 0.4,
+      "attack_type": "ranged",
+      "projectile_count": 2,
+      "radius": 12,
+      "projectile_speed": 450,
+      "skill": {
+        "type": "damage_aoe",
+        "damage": 60,
+        "radius": 120
+      }
+    },
+    "敌军包围者": {
+      "type": "fighter",
+      "name": "包围战斗机",
+      "description": "执行包围战术的敌军",
+      "max_hp": 130,
+      "max_energy": 130,
+      "speed": 170,
+      "attack_damage": 22,
+      "attack_range": 150,
+      "attack_cooldown": 0.45,
+      "attack_type": "ranged",
+      "projectile_count": 2,
+      "radius": 11,
+      "projectile_speed": 420,
+      "skill": {
+        "type": "buff_speed",
+        "speed_multiplier": 2.0,
+        "radius": 150,
+        "duration": 6
+      }
+    }
+  },
+  "terrain": [
+    {"type": "asteroid", "position": [1200, 800], "radius": 100},
+    {"type": "debris", "position": [800, 700], "radius": 40},
+    {"type": "debris", "position": [1600, 700], "radius": 40},
+    {"type": "debris", "position": [800, 900], "radius": 40},
+    {"type": "debris", "position": [1600, 900], "radius": 40}
+  ],
+  "player_units": [
+    {"unit_id": "玩家战斗机", "position": [1150, 780]},
+    {"unit_id": "玩家战斗机", "position": [1250, 780]},
+    {"unit_id": "玩家战斗机", "position": [1150, 820]},
+    {"unit_id": "玩家战斗机", "position": [1250, 820]},
+    {"unit_id": "玩家战斗机", "position": [1200, 750]},
+    {"unit_id": "玩家战斗机", "position": [1200, 850]}
+  ],
+  "enemy_units": [
+    {"unit_id": "敌军包围者", "position": [1100, 200]},
+    {"unit_id": "敌军包围者", "position": [1200, 200]},
+    {"unit_id": "敌军包围者", "position": [1300, 200]},
+    {"unit_id": "敌军包围者", "position": [1100, 1400]},
+    {"unit_id": "敌军包围者", "position": [1200, 1400]},
+    {"unit_id": "敌军包围者", "position": [1300, 1400]},
+    {"unit_id": "敌军包围者", "position": [300, 750]},
+    {"unit_id": "敌军包围者", "position": [300, 800]},
+    {"unit_id": "敌军包围者", "position": [300, 850]},
+    {"unit_id": "敌军包围者", "position": [2100, 750]},
+    {"unit_id": "敌军包围者", "position": [2100, 800]},
+    {"unit_id": "敌军包围者", "position": [2100, 850]}
+  ],
+  "victory_conditions": {
+    "eliminate_all": true
+  },
+  "defeat_conditions": {
+    "lose_all": true
+  },
+  "special_rules": {
+    "description": "敌人从四面八方包围过来！利用中心地形优势！"
+  }
+}

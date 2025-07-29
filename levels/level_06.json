@@ -1,0 +1,233 @@
+{
+    "name": "第六关 - 大规模战争",
+    "description": "史无前例的大规模战争爆发",
+    "units": {
+      "玩家母舰": {
+        "type": "mothership",
+        "name": "自由号母舰",
+        "description": "强大的指挥舰",
+        "max_hp": 2800,
+        "max_energy": 0,
+        "speed": 40,
+        "attack_damage": 50,
+        "attack_range": 250,
+        "attack_cooldown": 1.1,
+        "attack_type": "beam",
+        "radius": 40,
+        "projectile_speed": 500
+      },
+      "玩家战斗机": {
+        "type": "fighter",
+        "name": "猎鹰战斗机",
+        "description": "灵活的战斗机",
+        "max_hp": 280,
+        "max_energy": 190,
+        "speed": 115,
+        "attack_damage": 20,
+        "attack_range": 180,
+        "attack_cooldown": 0.4,
+        "attack_type": "ranged",
+        "projectile_count": 3,
+        "radius": 15,
+        "projectile_speed": 400,
+        "skill": {
+          "type": "damage_aoe",
+          "damage": 100,
+          "radius": 240
+        }
+      },
+      "玩家拦截机": {
+        "type": "interceptor",
+        "name": "闪电拦截机",
+        "description": "高速拦截战斗机",
+        "max_hp": 200,
+        "max_energy": 160,
+        "speed": 180,
+        "attack_damage": 16,
+        "attack_range": 140,
+        "attack_cooldown": 0.3,
+        "attack_type": "ranged",
+        "projectile_count": 4,
+        "radius": 12,
+        "projectile_speed": 450,
+        "skill": {
+          "type": "teleport",
+          "radius": 350
+        }
+      },
+      "玩家轰炸机": {
+        "type": "bomber",
+        "name": "雷神轰炸机",
+        "description": "强力的轰炸单位",
+        "max_hp": 400,
+        "max_energy": 240,
+        "speed": 85,
+        "attack_damage": 45,
+        "attack_range": 260,
+        "attack_cooldown": 1.5,
+        "attack_type": "artillery",
+        "splash_radius": 130,
+        "radius": 20,
+        "projectile_speed": 160,
+        "skill": {
+          "type": "damage_aoe",
+          "damage": 160,
+          "radius": 300
+        }
+      },
+      "玩家重型机甲": {
+        "type": "heavy",
+        "name": "雷神重甲",
+        "description": "装甲厚重的重型单位",
+        "max_hp": 550,
+        "max_energy": 260,
+        "speed": 65,
+        "attack_damage": 36,
+        "attack_range": 200,
+        "attack_cooldown": 0.8,
+        "attack_type": "artillery",
+        "splash_radius": 100,
+        "radius": 25,
+        "projectile_speed": 220,
+        "skill": {
+          "type": "shield",
+          "shield_amount": 180,
+          "radius": 300,
+          "duration": 20
+        }
+      },
+      "玩家修理机": {
+        "type": "repair",
+        "name": "医疗护卫舰",
+        "description": "专业的修理单位",
+        "max_hp": 240,
+        "max_energy": 190,
+        "speed": 95,
+        "repair_range": 140,
+        "repair_rate": 40,
+        "radius": 12,
+        "skill": {
+          "type": "heal_aoe",
+          "heal": 120,
+          "radius": 280
+        }
+      },
+      "敌军战争母舰": {
+        "type": "mothership",
+        "name": "战争领主号",
+        "description": "敌军的战争母舰",
+        "max_hp": 2600,
+        "max_energy": 0,
+        "speed": 38,
+        "attack_damage": 60,
+        "attack_range": 240,
+        "attack_cooldown": 1.3,
+        "attack_type": "artillery",
+        "splash_radius": 120,
+        "radius": 55,
+        "projectile_speed": 200
+      },
+      "敌军战斗机": {
+        "type": "fighter",
+        "name": "军团战斗机",
+        "description": "敌军的量产战斗机",
+        "max_hp": 220,
+        "max_energy": 170,
+        "speed": 105,
+        "attack_damage": 20,
+        "attack_range": 150,
+        "attack_cooldown": 0.5,
+        "attack_type": "ranged",
+        "projectile_count": 2,
+        "radius": 15,
+        "skill": {
+          "type": "damage_aoe",
+          "damage": 70,
+          "radius": 200
+        }
+      },
+      "敌军重型机": {
+        "type": "heavy",
+        "name": "战争机甲",
+        "description": "敌军的重型战争机甲",
+        "max_hp": 400,
+        "max_energy": 190,
+        "speed": 58,
+        "attack_damage": 42,
+        "attack_range": 170,
+        "attack_cooldown": 1.1,
+        "attack_type": "artillery",
+        "splash_radius": 75,
+        "radius": 28,
+        "projectile_speed": 180,
+        "skill": {
+          "type": "damage_aoe",
+          "damage": 110,
+          "radius": 260
+        }
+      },
+      "敌军轰炸机": {
+        "type": "bomber",
+        "name": "毁灭轰炸机",
+        "description": "敌军的毁灭轰炸机",
+        "max_hp": 300,
+        "max_energy": 180,
+        "speed": 75,
+        "attack_damage": 50,
+        "attack_range": 240,
+        "attack_cooldown": 1.9,
+        "attack_type": "artillery",
+        "splash_radius": 130,
+        "radius": 25,
+        "projectile_speed": 140,
+        "skill": {
+          "type": "disable",
+          "radius": 240,
+          "duration": 7
+        }
+      }
+    },
+    "player_units": [
+      {"unit_id": "玩家母舰", "position": [1200, 1400]},
+      {"unit_id": "玩家战斗机", "position": [900, 1280]},
+      {"unit_id": "玩家战斗机", "position": [1000, 1280]},
+      {"unit_id": "玩家战斗机", "position": [1100, 1280]},
+      {"unit_id": "玩家战斗机", "position": [1300, 1280]},
+      {"unit_id": "玩家战斗机", "position": [1400, 1280]},
+      {"unit_id": "玩家战斗机", "position": [1500, 1280]},
+      {"unit_id": "玩家拦截机", "position": [950, 1320]},
+      {"unit_id": "玩家拦截机", "position": [1050, 1320]},
+      {"unit_id": "玩家拦截机", "position": [1150, 1320]},
+      {"unit_id": "玩家拦截机", "position": [1250, 1320]},
+      {"unit_id": "玩家拦截机", "position": [1350, 1320]},
+      {"unit_id": "玩家拦截机", "position": [1450, 1320]},
+      {"unit_id": "玩家轰炸机", "position": [1100, 1360]},
+      {"unit_id": "玩家轰炸机", "position": [1200, 1360]},
+      {"unit_id": "玩家轰炸机", "position": [1300, 1360]},
+      {"unit_id": "玩家重型机甲", "position": [1050, 1380]},
+      {"unit_id": "玩家重型机甲", "position": [1200, 1380]},
+      {"unit_id": "玩家重型机甲", "position": [1350, 1380]},
+      {"unit_id": "玩家修理机", "position": [1200, 1320]},
+      {"unit_id": "玩家修理机", "position": [1100, 1340]}
+    ],
+    "enemy_units": [
+      {"unit_id": "敌军战争母舰", "position": [1200, 200]},
+      {"unit_id": "敌军战斗机", "position": [800, 300]},
+      {"unit_id": "敌军战斗机", "position": [900, 300]},
+      {"unit_id": "敌军战斗机", "position": [1000, 300]},
+      {"unit_id": "敌军战斗机", "position": [1100, 300]},
+      {"unit_id": "敌军战斗机", "position": [1300, 300]},
+      {"unit_id": "敌军战斗机", "position": [1400, 300]},
+      {"unit_id": "敌军战斗机", "position": [1500, 300]},
+      {"unit_id": "敌军战斗机", "position": [1600, 300]},
+      {"unit_id": "敌军重型机", "position": [1000, 250]},
+      {"unit_id": "敌军重型机", "position": [1100, 250]},
+      {"unit_id": "敌军重型机", "position": [1200, 250]},
+      {"unit_id": "敌军重型机", "position": [1300, 250]},
+      {"unit_id": "敌军重型机", "position": [1400, 250]},
+      {"unit_id": "敌军轰炸机", "position": [1050, 200]},
+      {"unit_id": "敌军轰炸机", "position": [1150, 200]},
+      {"unit_id": "敌军轰炸机", "position": [1250, 200]},
+      {"unit_id": "敌军轰炸机", "position": [1350, 200]}
+    ]
+  }
